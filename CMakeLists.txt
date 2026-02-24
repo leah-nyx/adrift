@@ -13,7 +13,7 @@ ExternalProject_Add(
     SOURCE_DIR ${CMAKE_SOURCE_DIR}/external/wlroots
     CONFIGURE_COMMAND meson setup build
     BUILD_COMMAND meson compile -C build
-    INSTALL_COMMAND "" 
+    INSTALL_COMMAND ""
     BUILD_BYPRODUCTS ${CMAKE_SOURCE_DIR}/external/wlroots/build/libwlroots.a
 )
 
