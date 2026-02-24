@@ -7,29 +7,29 @@ void CameraInit(struct Camera* camera)
     camera->z = 1.0;
 }
 
-void MoveTo3D(struct Camera* camera, double x, double y, double z)
+void MoveCameraTo3D(struct Camera* camera, double x, double y, double z)
 {
     camera->x = x;
     camera->y = y;
     if (z >= 1.0) { camera->z = z; }
 }
 
-void MoveTo2D(struct Camera* camera, double x, double y)
+void MoveCameraTo2D(struct Camera* camera, double x, double y)
 {
     camera->x = x;
     camera->y = y;
 }
 
-void MoveToX(struct Camera* camera, double x) { camera->x = x; }
+void MoveCameraToX(struct Camera* camera, double x) { camera->x = x; }
 
-void MoveToY(struct Camera* camera, double y) { camera->y = y; }
+void MoveCameraToY(struct Camera* camera, double y) { camera->y = y; }
 
-void MoveToZ(struct Camera* camera, double z)
+void MoveCameraToZ(struct Camera* camera, double z)
 {
     if (z >= 1) { camera->z = z; }
 }
 
-void MoveBy3D(struct Camera* camera, double dx, double dy, double dz)
+void MoveCameraBy3D(struct Camera* camera, double dx, double dy, double dz)
 {
     camera->x += dx;
     camera->y += dy;
@@ -37,17 +37,17 @@ void MoveBy3D(struct Camera* camera, double dx, double dy, double dz)
     if (camera->z < 1.0) { camera->z = 1.0; }
 }
 
-void MoveBy2D(struct Camera* camera, double dx, double dy)
+void MoveCameraBy2D(struct Camera* camera, double dx, double dy)
 {
     camera->x += dx;
     camera->y += dy;
 }
 
-void MoveByX(struct Camera* camera, double dx) { camera->x += dx; }
+void MoveCameraByX(struct Camera* camera, double dx) { camera->x += dx; }
 
-void MoveByY(struct Camera* camera, double dy) { camera->y += dy; }
+void MoveCameraByY(struct Camera* camera, double dy) { camera->y += dy; }
 
-void MoveByZ(struct Camera* camera, double dz)
+void MoveCameraByZ(struct Camera* camera, double dz)
 {
     camera->z += dz;
     if (camera->z < 1.0) { camera->z = 1.0; }
