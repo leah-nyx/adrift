@@ -17,7 +17,10 @@ ExternalProject_Add(
     BUILD_BYPRODUCTS ${CMAKE_SOURCE_DIR}/external/wlroots/build/libwlroots.a
 )
 
-add_executable(adrift src/main.c)
+add_executable(adrift
+    src/main.c
+    src/camera.c
+)
 target_include_directories(adrift PRIVATE include ${CMAKE_SOURCE_DIR}/external/wlroots/build/include)
 add_dependencies(adrift wlroots)
 target_link_libraries(adrift PRIVATE ${CMAKE_SOURCE_DIR}/external/wlroots/build/libwlroots.a)
