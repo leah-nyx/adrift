@@ -1,9 +1,9 @@
 #include <adrift/camera.h>
 
-void CameraInit(struct Camera* camera, double screenWidth, double screenHeight)
+void CameraInit(struct Camera* camera)
 {
-    camera->x = 0 - (screenWidth / 2);
-    camera->y = 0 - (screenHeight / 2);
+    camera->x = 0;
+    camera->y = 0;
     camera->z = 1.0;
 }
 

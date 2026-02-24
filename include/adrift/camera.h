@@ -8,7 +8,7 @@ struct Camera
     double z; // >= 1.0
 };
 
-void CameraInit(struct Camera* camera, double screenWidth, double screenHeight);
+void CameraInit(struct Camera* camera);
 
 void MoveTo3D(struct Camera* camera, double x, double y, double z);
 void MoveTo2D(struct Camera* camera, double x, double y);
